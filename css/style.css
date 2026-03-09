@@ -1,0 +1,366 @@
+/* 基础排版与色彩，参考 AEA 简约学术风格 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+a {
+  color: #8b1c1c;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header {
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.2rem 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.brand {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.lang-switch {
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  margin-left: auto;
+}
+
+.lang-switch a {
+  color: #8b1c1c;
+  font-weight: 500;
+}
+
+.lang-switch .current {
+  color: #999;
+  cursor: default;
+}
+
+.lang-switch .lang-sep {
+  color: #bbb;
+  margin: 0 0.25rem;
+  pointer-events: none;
+}
+
+.brand-logos {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  height: 48px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-text {
+  min-width: 0;
+}
+
+.brand-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #8b1c1c;
+  margin: 0 0 0.2rem;
+  line-height: 1.2;
+}
+
+.brand-subtitle {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+.layout {
+  max-width: 1120px;
+  width: 100%;
+  margin: 1.5rem auto 2rem;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 2rem;
+}
+
+.side-nav h2 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #777;
+  margin: 0 0 0.75rem;
+}
+
+.side-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-nav li {
+  margin-bottom: 0.4rem;
+}
+
+.side-nav li a {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.side-nav li.active a {
+  font-weight: 600;
+  color: #8b1c1c;
+}
+
+.content {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 1.5rem 1.75rem 2rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.hero-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #999;
+  margin: 0 0 0.4rem;
+}
+
+.hero h1 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.hero-meta {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 0 0.8rem;
+}
+
+.hero-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.info-card {
+  border: 1px solid #e6e6e6;
+  background-color: #fafafa;
+  padding: 1rem 1rem 1.1rem;
+}
+
+.info-card-link {
+  color: inherit;
+  display: block;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.info-card-link:hover,
+.info-card-link:focus {
+  border-color: #8b1c1c;
+  background-color: #fff;
+  text-decoration: none;
+}
+
+.info-card-link h2 {
+  color: #8b1c1c;
+  font-size: 1rem;
+}
+
+.info-card-link:hover h2,
+.info-card-link:focus h2 {
+  text-decoration: underline;
+}
+
+.info-card-link p {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: 0.4rem 0 0;
+  color: #555;
+}
+
+.info-card h2 {
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+
+.info-card dl {
+  margin: 0;
+}
+
+.info-card dl div {
+  margin-bottom: 0.4rem;
+}
+
+.info-card dt {
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.info-card dd {
+  margin: 0.1rem 0 0;
+  font-size: 0.88rem;
+}
+
+.plain-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.plain-list li + li {
+  margin-top: 0.35rem;
+}
+
+.section-block {
+  margin-bottom: 1.5rem;
+}
+
+.section-block h2 {
+  font-size: 1.15rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.4rem;
+  margin: 0 0 0.6rem;
+}
+
+.section-block p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0 0 0.7rem;
+}
+
+/* Inner (secondary) page content */
+.content h1 {
+  font-size: 1.35rem;
+  margin: 0 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.page-body p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0 0 0.7rem;
+}
+
+.site-footer {
+  border-top: 1px solid #ddd;
+  background-color: #ffffff;
+  padding: 1rem 1.5rem 1.4rem;
+  margin-top: auto;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.footer-links {
+  max-width: 1120px;
+  margin: 0 auto 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-copy {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* 响应式调整 */
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .side-nav {
+    order: -1;
+  }
+
+  .content {
+    padding: 1.25rem 1.25rem 1.6rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .brand {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
