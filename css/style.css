@@ -288,6 +288,12 @@ a:focus {
   margin: 0 0 0.7rem;
 }
 
+.section-divider {
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+  margin: 0.9rem 0 0;
+}
+
 /* Keynote speaker block on homepage */
 .keynote {
   margin-bottom: 1.75rem;
@@ -440,4 +446,6 @@ a:focus {
   margin: 2.05rem 0 0.6rem 1rem;
 }
 }
+
+
 
